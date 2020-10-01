@@ -1,0 +1,28 @@
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flexrowrev {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flexcolrev {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.navfont {
+  font-family: 'Aladin', cursive;
+}
+.bodyfont {
+  font-family: 'Indie Flower', cursive;
+}
