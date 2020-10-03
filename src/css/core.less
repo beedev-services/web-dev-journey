@@ -5,35 +5,64 @@
 
 .App {
     .flexcolumn();
+    color: @font;
 
     .header {
-        .flexrow();
-        justify-content: center;
+        .flexcolumn();
         padding: .5em;
         background-color: @navbg;
         border: @border;
+        .navfont();
+        border-radius: 10%;
+        width: 95%;
 
-        .beegif {
-            width: 2.5em;
+        .title {
+            .flexrow();
+            justify-content: center;
+
+            .beegif {
+                width: 2.5em;
+            }
+    
+            h1 {
+                font-size: 1.5em;
+                font-weight: bold;
+                text-align: center;
+            }
         }
-
-        h1 {
-            font-size: 1.5em;
-            font-weight: bold;
+        nav {
+            .flexrow();
+            justify-content: center;
             text-align: center;
-            .navfont();
+
+            a {
+                padding: .5em;
+                color: @grnbg;
+            }
         }
+
+        
+    }
+    .main {
+        .flexcolumn();
+        width: 95%
     }
     .footer {
         .flexcolumn();
         padding: 1em;
         border: @altborder;
+        border-radius: 10%;
+        width: 95%;
 
         h3 {
             .bodyfont();
             font-size: 1em;
             text-align: center;
             padding: .5em;
+
+            a {
+                color: @font;
+            }
         }
     }
 }

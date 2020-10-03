@@ -166,24 +166,51 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #001a06;
 }
 .App .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  background-color: #ffeeb3;
+  border: 3px groove #ffd333;
+  font-family: 'Aladin', cursive;
+  border-radius: 10%;
+  width: 95%;
+}
+.App .header .title {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0.5em;
-  background-color: #ffeeb3;
-  border: 3px groove #ffd333;
 }
-.App .header .beegif {
+.App .header .title .beegif {
   width: 2.5em;
 }
-.App .header h1 {
+.App .header .title h1 {
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
-  font-family: 'Aladin', cursive;
+}
+.App .header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.App .header nav a {
+  padding: 0.5em;
+  color: #00661a;
+}
+.App .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
 }
 .App .footer {
   display: flex;
@@ -192,10 +219,15 @@ body {
   align-items: center;
   padding: 1em;
   border: 3px groove #00661a;
+  border-radius: 10%;
+  width: 95%;
 }
 .App .footer h3 {
   font-family: 'Indie Flower', cursive;
   font-size: 1em;
   text-align: center;
   padding: 0.5em;
+}
+.App .footer h3 a {
+  color: #001a06;
 }
