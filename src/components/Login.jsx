@@ -11,7 +11,7 @@ const Login = (props) => {
     e.preventDefault();
     setIsLoading(true);
     axios
-      .post("http://localhost:4000/api/auth/login", credentials)
+      .post("https://beedev-blog-api.herokuapp.com/api/auth/login", credentials)
       .then((res) => {
         setTimeout(() => {
           setIsLoading(false);
@@ -38,7 +38,6 @@ const Login = (props) => {
   return (
     <div style={{ margin: "0 auto", marginTop: "5%" }}>
       <h1>Login</h1>
-      <p>{`Admin: username: Lambda School password: i<3Lambd4`}</p>
       <h3 style={{ color: "red" }}>{error}</h3>
       {isLoading ? (
         <h1>Loading</h1>

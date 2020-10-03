@@ -7,7 +7,6 @@ import './css/core.css'
 import Home from './components/Home'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
-// import Navigation from './components/LoggedInNav'
 
 const App = () => {
   return (
@@ -21,7 +20,6 @@ const App = () => {
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/login'>Login</Link>
-          {/* <Navigation /> */}
         </nav>
       </div>
       <div className="main">
