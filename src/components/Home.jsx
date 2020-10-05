@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+// import {axiosWithAuth} from '../auth/axiosWithAuth'
+import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+import Post from './Post'
 
 
-export default function Home() {
+function Home() {
+
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        axios
+        .get('https://beedev-blog-api.herokuapp.com/api/posts')
+        .then(res => setPosts(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     return (
         <div>
-            Main content
+            <h1>Welcome to the blog</h1>
+            <ul>
+                {posts.map((post) => {
+                    return (<Post key={post.id} post={post}></Post>)
+                })}
+            </ul>
         </div>
     )
 }
+
+export default Home

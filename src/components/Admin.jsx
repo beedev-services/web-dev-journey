@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 
-export default function Admin() {
+const Admin = (props) => {
+    const logout = () => {
+        localStorage.removeItem('token')
+      }
+
+      const [post, setPost] = useState({ title: "", content: ""})
+
     return (
         <div>
-            Admin Dashboard
+            <Link to='dashboard'>Dashboard</Link>
+            {<a href='/' onClick={logout}>Logout</a>}
         </div>
     )
 }
+
+export default Admin
