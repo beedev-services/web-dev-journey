@@ -9,33 +9,15 @@ import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import Admin from './components/Admin'
 
-// const isLoggedIn = true;
+const isLoggedIn = true;
 
 
-class App extends Component {
+const App = () => {
 
-  state = {
-    isLoggedIn: false
+const logout = () => {
+    localStorage.removeItem('token')
   }
 
-  handleShow = () => {
-    this.setState({
-      isLoggedIn: true
-    })
-  }
-
-  handleHide = () => {
-    this.setState({
-      isLoggedIn: false
-    })
-  }
-
-  // logout = () => {
-  //   localStorage.removeItem('token')
-  // }
-  // onClick={logout}
-
-  render() {
     return (
       <div className="App">
         <div className="header">
@@ -47,7 +29,7 @@ class App extends Component {
           <nav>
             <Link to='/'>Home</Link>
             <Link to='/login'>Login</Link>
-            {this.state.isLoggedIn ? <a href='/' >Logout</a>: null}
+            {isLoggedIn && <a href='/' onClick={logout}>Logout</a>}
           </nav>
         </div>
         <div className="main">
@@ -64,8 +46,6 @@ class App extends Component {
         </div>
       </div>
     )
-  }
-  
 }
 
 export default App
