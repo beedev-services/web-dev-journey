@@ -45,7 +45,79 @@
     }
     .main {
         .flexcolumn();
-        width: 95%
+        width: 95%;
+
+        h1 {
+            .navfont();
+            .flexrow();
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: .5em;
+            border-bottom: 3px groove @navbg;
+        }
+        ul {
+            .flexcolumn();
+            
+            .post-wrapper {
+                .flexcolumn();
+                .bodyfont();
+                width: 95%;
+                border: 1px solid grey;
+                border-radius: 20%;
+                margin: .5em 0;
+                padding-bottom: .3em;
+
+                h3 {
+                    font-size: 1.2em;
+                    color: @grnbg;
+                    font-weight: bold;
+                    padding: .2em;
+                }
+                p {
+                    width: 95%;
+                    padding: .2em;
+                    text-align: justify;
+                }
+            }
+        }
+        .login-form {
+            .flexcolumn();
+            margin: .2em;
+            .navfont();
+
+            .boxes {
+                padding: .2em;
+                margin: .5em;
+            }
+            button {
+                background-color: @grnbg;
+                color: @navbg;
+                border: 2px groove @grnbg;
+                font-size: 1em;
+            }
+        }
+        .private-route {
+            .flexcolumn();
+            margin: .2em;
+
+            nav {
+                .flexrow();
+                border-bottom: 2px groove @grnbg;
+                margin: .2em .2em .5em .2em;
+
+                a {
+                    padding: .4em;
+                    .bodyfont();
+                    font-size: 1.2em;
+                }
+            }
+            .add-post {
+                .flexcolumn();
+                .bodyfont();
+            }
+        }
     }
     .footer {
         .flexcolumn();

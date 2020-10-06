@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-// import {axiosWithAuth} from '../auth/axiosWithAuth'
+import axiosWithAuth from '../auth/axiosWithAuth'
 import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import Post from './Post'
 
@@ -10,7 +10,7 @@ function Home() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        axios
+        axiosWithAuth()
         .get('https://beedev-blog-api.herokuapp.com/api/posts')
         .then(res => setPosts(res.data))
         .catch(err => console.log(err))

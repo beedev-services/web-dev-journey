@@ -212,6 +212,91 @@ body {
   align-items: center;
   width: 95%;
 }
+.App .main h1 {
+  font-family: 'Aladin', cursive;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+  border-bottom: 3px groove #ffeeb3;
+}
+.App .main ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App .main ul .post-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+  width: 95%;
+  border: 1px solid grey;
+  border-radius: 20%;
+  margin: 0.5em 0;
+  padding-bottom: 0.3em;
+}
+.App .main ul .post-wrapper h3 {
+  font-size: 1.2em;
+  color: #00661a;
+  font-weight: bold;
+  padding: 0.2em;
+}
+.App .main ul .post-wrapper p {
+  width: 95%;
+  padding: 0.2em;
+  text-align: justify;
+}
+.App .main .login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2em;
+  font-family: 'Aladin', cursive;
+}
+.App .main .login-form .boxes {
+  padding: 0.2em;
+  margin: 0.5em;
+}
+.App .main .login-form button {
+  background-color: #00661a;
+  color: #ffeeb3;
+  border: 2px groove #00661a;
+  font-size: 1em;
+}
+.App .main .private-route {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2em;
+}
+.App .main .private-route nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2px groove #00661a;
+  margin: 0.2em 0.2em 0.5em 0.2em;
+}
+.App .main .private-route nav a {
+  padding: 0.4em;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2em;
+}
+.App .main .private-route .add-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+}
 .App .footer {
   display: flex;
   flex-direction: column;

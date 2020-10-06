@@ -10,11 +10,9 @@ export default function Post(props) {
     }, [props.post])
 
     return (
-        <div>
-            <p>{post.title}</p>
+        <div className='post-wrapper'>
+            <h3>{post.title}</h3>
             <p>{post.content}</p>
-            <p>{post.category_id}</p>
-            <p>{post.users_id}</p>
         </div>
     )
 }

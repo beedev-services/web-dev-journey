@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import axiosWithAuth from '../auth/axiosWithAuth'
 import { Link } from 'react-router-dom'
 import Post from './Post'
 import User from './User'
-
-
-
 
 export default function Dashboard() {
     const logout = () => {
@@ -22,16 +20,18 @@ export default function Dashboard() {
     }, [])
 
     useEffect(() => {
-        axios
+        axiosWithAuth()
         .get('https://beedev-blog-api.herokuapp.com/api/users/1')
         .then(res => setUsers(res.data))
         .catch(err => console.log(err))
     }, [])
 
     return (
-        <div>
-            <Link to='admin'>Admin</Link>
-            {<a href='/' onClick={logout}>Logout</a>}
+        <div className='private-route'>
+            <nav>
+                <Link to='admin'>Admin</Link>
+                {<a href='/' onClick={logout}>Logout</a>}
+            </nav>
             <div>
                 <ul>
                     {users.map((user) => {
