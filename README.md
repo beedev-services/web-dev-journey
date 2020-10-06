@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# A Web Developers Journey Blog
+This is going to be a blog that new web developers can contribute to, while learning to be a web developers.  A place to share with others their issues and triumphs.
 
-## Available Scripts
+## What is working?
+Right now test posts are being pulled from the database and displayed on both the main (no log in required page) and Dashboard (login required) pages
 
-In the project directory, you can run:
+## What is needed?
+There are still a few things to add
 
-### `npm start`
+### 1) Register page
+This will need to be a form to register new general users so that they can add new blog posts
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. A page will need to be created to register and form on the page
+2. No role is needed as default is set to general user
+3. Required entries will be on the API documentation
+4. API link `/api/auth/register` (database is up and running routes are created)
+5. New users should land on the `/dashboard` page upon successful creation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### 2) General User page
+This page is where they will add their blog posts
 
-### `npm test`
+1. A page will be needed and form created
+2. API link `/posts` (database is up and running routes are created)
+3. Link to this page should be from their dashboard
+4. Should have back links to Dashboard and Logout like current Admin page
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3) Dashboard update
+The following updates should be made to the dashboard page
 
-### `npm run build`
+1. Show current users name or user name
+2. Link to general user page (unless admin then to admin page)
+3. Show all the posts that the current user has created
+4. Update / Delete buttons for current users posts
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4) Admin update
+The following updates can be made to the Admin page
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. List of all posts and an update/delete button for all posts as this is the admin
+2. Link to General user page as well so that even logged in as Admin you can see what posts you have made and update/delete them
+3. Link to show all users, their names, email
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 5) Future updates
+These are other ideas to add.
 
-### `npm run eject`
+1. Ability to have a basic user comment on blog posts
+2. general users and admin users can delete comments on posts
+3. Short versions of the blog posts that are clickable to show full post in new page
+4. About the author pages where the general users or authors can have a link to their social media or portfolios
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## API base URL
+https://beedev-blog-api.herokuapp.com
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Documentation for API is being created and will be found directly on the base url.
+2. Database tables are created, routes are still being added.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Rules
+1. Do not push to master branch
+2. Create your own branch and create a pull request
+3. Do not merge any pull requests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Questions?
+Please feel free to reach out to Melissa Longenberger (owner):
+1. melissa@beedev-services.com 
+2. Slack Channel = https://join.slack.com/t/beedev-itservices/shared_invite/zt-i21p28jo-P3LBfEjpMRCO7yxwmqA7Og
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Run app
+1. Clone repo
+2. Create your own branch
+3. npm install
+4. npm start
