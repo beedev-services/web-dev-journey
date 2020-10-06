@@ -9,14 +9,8 @@ import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import Admin from './components/Admin'
 
-const isLoggedIn = true;
-
 
 const App = () => {
-
-const logout = () => {
-    localStorage.removeItem('token')
-  }
 
     return (
       <div className="App">
@@ -29,7 +23,6 @@ const logout = () => {
           <nav>
             <Link to='/'>Home</Link>
             <Link to='/login'>Login</Link>
-            {isLoggedIn && <a href='/' onClick={logout}>Logout</a>}
           </nav>
         </div>
         <div className="main">

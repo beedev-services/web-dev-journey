@@ -42,25 +42,15 @@ const Login = (props) => {
       {isLoading ? (
         <h1>Loading</h1>
       ) : (
-        <form
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "50%",
-            margin: "0 auto",
-            height: "120px",
-            justifyContent: "space-between",
-          }}
-          onSubmit={handleLogin}
-        >
-          <input
+        <form onSubmit={handleLogin} className='login-form'>
+          <input className='boxes'
             type="text"
             placeholder="Username"
             name="username"
             value={credentials.username}
             onChange={handleChange}
           />
-          <input
+          <input className='boxes'
             type="password"
             placeholder="Password"
             name="password"
