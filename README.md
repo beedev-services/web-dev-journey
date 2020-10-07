@@ -4,6 +4,9 @@ This is going to be a blog that new web developers can contribute to, while lear
 ## What is working?
 Right now test posts are being pulled from the database and displayed on both the main (no log in required page) and Dashboard (login required) pages
 
+1. General User = username = testuser || password = JustATest
+2. Admin User = username = admin || password = JustATest
+
 ## What is needed?
 There are still a few things to add
 
