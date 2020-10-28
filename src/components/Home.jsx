@@ -5,16 +5,18 @@ import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import Post from './Post'
 
 
-function Home() {
-
-    const [posts, setPosts] = useState([])
-
-    useEffect(() => {
-        axiosWithAuth()
-        .get('https://beedev-blog-api.herokuapp.com/api/posts')
-        .then(res => setPosts(res.data))
-        .catch(err => console.log(err))
-    }, [])
+useEffect(() => {
+    axios
+        .post('https://beedev-blog-api.herokuapp.com/api/posts')
+        .then(res => {
+        console.log("Form -> res", res.data)
+        setPost([...post, res.data])
+        setServerError(null)
+        })
+        .catch(err => { 
+        setServerError("There is an error!")
+        }) 
+}, [])
 
     return (
         <div>
@@ -26,6 +28,6 @@ function Home() {
             </ul>
         </div>
     )
-}
+
 
 export default Home
